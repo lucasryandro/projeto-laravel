@@ -4,4 +4,4 @@ Projeto laravel feito durantes as aulas de Linguagem Web II
 
 Segue modelo relacional do banco abaixo:
 
-![modelo_relacional](https://github.com/user-attachments/assets/87348afe-44be-40a5-a6e7-d48846b08550)
+![Diagrama Banco Projeto Laravel-Page-1](https://github.com/user-attachments/assets/f35827a8-ecd1-451b-9187-7e9f49a59b8d)
