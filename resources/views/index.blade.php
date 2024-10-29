@@ -12,6 +12,7 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/090e76854b.js" crossorigin="anonymous"></script>
 
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -161,7 +162,7 @@
                             <div class="hi-text">
                                 <span>Mude sua rotina</span>
                                 <h1>Seja<strong> Forte</strong> Treine <strong>pesado</strong></h1>
-                                <a href="#" class="primary-btn">Get info</a>
+                                <a href="#" class="primary-btn">Mais infos</a>
                             </div>
                         </div>
                     </div>
@@ -174,7 +175,7 @@
                             <div class="hi-text">
                                 <span>Mude sua rotina</span>
                                 <h1>Seja <strong>Forte</strong> Treine <strong>pesado</strong></h1>
-                                <a href="#" class="primary-btn">Get info</a>
+                                <a href="#" class="primary-btn">Mais infos</a>
                             </div>
                         </div>
                     </div>
@@ -190,8 +191,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <span>Why chose us?</span>
-                        <h2>PUSH YOUR LIMITS FORWARD</h2>
+                        <span>Precisa de estímulos?</span>
+                        <h2>SUPERE SEUS LIMITES</h2>
                     </div>
                 </div>
             </div>

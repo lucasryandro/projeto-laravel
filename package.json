@@ -1,8 +1,7 @@
 {
     "private": true,
     "scripts": {
-        "dev": "vite",
-        "build": "vite build"
+        "teste": "echo 'teste'"
     },
     "devDependencies": {
         "axios": "^1.1.2",

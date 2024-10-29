@@ -18,11 +18,13 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'nome',
         'email',
         'senha',
         'remember_token',
     ];
+
+    protected $table = 'users';
 
     /**
      * Não existe parametro para esconder.

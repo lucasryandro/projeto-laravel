@@ -16,7 +16,7 @@ class UserController extends Controller
         $users = User::get()->toArray();
 
         Log::info($users);
-        return view('indexAdmin')->with('data', 'text');
+        return view('indexAdmin')->with('users', $users);
     }
 
     public function pageRender()
@@ -64,24 +64,39 @@ class UserController extends Controller
         return view('users.edit', compact('user')); // Retorna a view para edição do usuário
     }
 
-    public function update(Request $request, User $user)
+    public function update(Request $request)
     {
-        // Validação dos dados
-        $validatedData = $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users,email,' . $user->id,
-            // Adicione outras validações conforme necessário
-        ]);
+       $id = $request->id;
+       $nome = $request->nome;
+       $senha = $request->password;
+       $email = $request->email;
 
-        // Atualiza o usuário
-        $user->update($validatedData);
+       $user = User::find($id);
+       if(!$user){
+            return "error";
+       }
+       $user->nome = $nome;
+       $user->email = $email;
 
-        return redirect()->route('users.index')->with('success', 'Usuário atualizado com sucesso!');
+       if($senha){
+        $user->senha = Hash::make($senha);
+
+       }
+       $user->save();
+
+       return redirect()->route('users.pageRender');
     }
 
-    public function destroy(User $user)
+    public function destroy(Request $request)
     {
+        $user = User::find($request->id);
         $user->delete(); // Deleta o usuário
-        return redirect()->route('users.index')->with('success', 'Usuário removido com sucesso!');
+        return redirect()->route('users.pageRender')->with('success', 'Usuário removido com sucesso!');
+    }
+
+    public function updateView($id)
+    {
+        $user = User::find($id)->toArray(); // Deleta o usuário
+        return view('editAdmin')->with('user', $user);
     }
 }
